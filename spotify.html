@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Your favourite music is here</title>
+    <script src="https://kit.fontawesome.com/9904db98ee.js" crossorigin="anonymous"></script>
+</head>
+
+
+<audio id="audioElement" src="Blue-(SambalpuriStar.In).mp3"></audio>
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: antiquewhite;
+    }
+
+    header {
+        position: sticky;
+        background-color: black;
+        color: white;
+    }
+
+    .logoimage {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-left: 20px;
+    }
+
+    nav {
+        font-family: "Edu NSW ACT Hand Pre", cursive;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin-right: 600px;
+        align-items: center;
+    }
+
+    .spotifytext {
+        display: flex;
+        text-align: left;
+        font-size: 40px;
+        align-items: left;
+    }
+
+    .container {
+        height: 60vh;
+        background-color: black;
+        color: white;
+        font-family: "Josefin Sans", sans-serif;
+        display: flex;
+        flex-direction: column;
+        font-size: 7px;
+        margin: 23px auto;
+        width: 80vw;
+        padding: 20px;
+        background-image: url(0x1900-000000-80-0-0.jpg);
+        background-size: cover;
+        border-radius: 2%;
+    }
+
+    .bottom {
+        color: white;
+        position: sticky;
+        height: 80px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        bottom: 0;
+
+    }
+
+    #myprogressbar {
+        margin-top: 20px;
+        width: 80vw;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+
+    .songimg1 {
+        width: 30px;
+        height: 30px;
+        border-radius: 10%;
+    }
+
+    .blue {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .songbanner {
+        position: relative;
+        width: 100%;
+        height: 50px;
+
+    }
+
+    .songItem {
+        /* background-color: gray; */
+        border-radius: 14%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        /* flex-direction: column; */
+        /*justify-content: flex-start;
+        gap: 10px;
+        padding:  5px 10px;
+        position: absolute; */
+        left: 10px;
+        top: 10px;
+
+    }
+
+    .songlist {
+        margin-bottom: 20px;
+    }
+
+    .blue i {
+        cursor: pointer;
+    }
+
+    .songinfo {
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+        top: 44px;
+        margin-bottom: 14px;
+        font-family: "Edu NSW ACT Hand Pre", cursive;
+        font-size: 14px;
+
+    }
+
+    .songinfo img {
+        width: 50px;
+        height: 30px;
+        padding-right: 20px;
+        opacity: 0;
+        transition: opacity 0.8s ease-in;
+    }
+
+    .icons {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="logo">
+                    <img class="logoimage" src="spotify-1759471_1280.webp" spotify-logo>
+                </div>
+                <li class="spotifytext">Spotify</li>
+                <li>Home</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="songlist">
+            <h1>Best of ncs -No copyright songs</h1>
+        </div>
+
+        <div class="songbanner">
+            <div class="songItem">
+                <img class="songimg1" alt="">
+                <span class="blue">Blue<i id="0" class="fa-solid songItemPlay fa-play"></i></span>
+            </div>
+        </div>
+        <div class="songbanner">
+            <div class="songItem">
+                <img class="songimg1" alt="">
+                <span class="blue">Blue<i id="1" class="fa-solid songItemPlay fa-play"></i></span>
+            </div>
+        </div>
+        <div class="songbanner">
+            <div class="songItem">
+                <img class="songimg1" alt="">
+                <span class="blue">Blue<i id="2" class="fa-solid songItemPlay fa-play"></i></span>
+            </div>
+        </div>
+        <div class="songbanner">
+            <div class="songItem">
+                <img class="songimg1" alt="">
+                <span class="blue">Blue<i id="3" class="fa-solid songItemPlay fa-play"></i></span>
+            </div>
+        </div>
+        <div class="songbanner">
+            <div class="songItem">
+                <img class="songimg1" alt="">
+                <span class="blue">Blue<i id="4" class="fa-solid songItemPlay fa-play"></i></span>
+            </div>
+        </div>
+        <div class="songbanner">
+            <div class="songItem">
+                <img class="songimg1" alt="">
+                <span class="blue">Blue<i id="5" class="fa-solid songItemPlay fa-play"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="range" id="myprogressbar" value="0" min="0" max="100">
+        <div class="icons">
+            <i class="fa-solid fa-backward"></i>
+            <i class="fa-solid fa-play" id="masterplay"></i>
+            <i class="fa-solid fa-forward"></i>
+
+        </div>
+        <div class="songinfo">
+            <img src="colorful-waves.gif" alt="" id="gif">
+        </div>
+    </div>
+
+    <script>
+        console.log("Welcome to Spotify");
+        let audioElement = document.getElementById("audioElement");
+        let masterplay = document.getElementById("masterplay");
+        let myprogressbar = document.getElementById("myprogressbar");
+        let gif = document.getElementById("gif");
+        let songItems = Array.from(document.getElementsByClassName("songItem"));
+        let song = [
+            { songName: "Blue-Yung Kai", filepath: "Blue-(SambalpuriStar.In).mp3", coverpath: "blue-English-2024-20241029054606-500x500.jpg" },
+            { songName: "Superstar-dox,JASKARAN", filepath: "songs/Superstar - Jaskaran.mp3", coverpath: "covers/download.jpeg" },
+            { songName: "London-Money aujla", filepath: "songs/London - Money Aujla.mp3", coverpath: "covers/images.jpeg" },
+            { songName: "Jaikal Mahakal-Goodbye", filepath: "songs/Jaikal Mahakal Goodbye 128 Kbps.mp3", coverpath: "covers/jaikal.jpeg" },
+            { songName: "Gears-Ap Dhillon", filepath: "songs/Gears - Arjan Dhillon.mp3", coverpath: "covers/download (1).jpeg" },
+            { songName: "Winning Speech-Karan Aujla", filepath: "songs/Winning Speech - Karan Aujla.mp3", coverpath: "covers/download (2).jpeg" },
+        ];
+
+        songItems.forEach((element, i) => {
+            if (song[i]) {
+                element.getElementsByTagName("img")[0].src = song[i].coverpath;
+                element.getElementsByClassName("blue")[0].innerHTML = `${song[i].songName} 3:34 <i class="fa-solid songItemPlay fa-play"></i>`;
+            }
+        });
+
+        masterplay.addEventListener('click', () => {
+            if (audioElement.paused || audioElement.currentTime <= 0) {
+                audioElement.play().then(() => {
+                    masterplay.classList.remove('fa-play');
+                    masterplay.classList.add('fa-pause');
+                }).catch((error) => {
+                    console.log("Playback error: ", error);
+                    alert("User interaction is needed or file not found.");
+                });
+                gif.style.opacity = 1;
+            } else {
+                audioElement.pause();
+                masterplay.classList.remove('fa-pause');
+                masterplay.classList.add('fa-play');
+                gif.style.opacity = 0;
+            }
+        });
+
+        // Update Progress Bar
+        audioElement.addEventListener('timeupdate', () => {
+            let progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+            myprogressbar.value = progress;
+        });
+
+        // Seeking
+        myprogressbar.addEventListener('input', () => {
+            audioElement.currentTime = (myprogressbar.value * audioElement.duration) / 100;
+        });
+        //    
+        // ...existing code...
+
+
+        // Helper to set all song icons to play
+        const makeAllPlays = () => {
+            Array.from(document.getElementsByClassName("songItemPlay")).forEach(element => {
+                element.classList.remove('fa-pause');
+                element.classList.add('fa-play');
+            });
+        };
+
+        // Add event listeners to each song play icon
+        Array.from(document.getElementsByClassName("songItemPlay")).forEach((element, i) => {
+            element.addEventListener('click', (e) => {
+                makeAllPlays();
+                // ...existing code...
+            })
+        })
+        let songIndex = 0; // Track the current song
+
+        // Update song info and play
+        function playSong(index) {
+            if (song[index]) {
+                audioElement.src = song[index].filepath;
+                audioElement.currentTime = 0;
+                audioElement.play();
+                masterplay.classList.remove('fa-play');
+                masterplay.classList.add('fa-pause');
+                gif.style.opacity = 1;
+                makeAllPlays();
+                // Set the correct play/pause icon for the current song
+                let playIcons = document.getElementsByClassName("songItemPlay");
+                if (playIcons[index]) {
+                    playIcons[index].classList.remove('fa-play');
+                    playIcons[index].classList.add('fa-pause');
+                }
+                songIndex = index;
+            }
+        }
+
+        // Previous button
+        document.querySelector('.fa-backward').addEventListener('click', () => {
+            songIndex = songIndex <= 0 ? song.length - 1 : songIndex - 1;
+            playSong(songIndex);
+        });
+
+        // Next button
+        document.querySelector('.fa-forward').addEventListener('click', () => {
+            songIndex = songIndex >= song.length - 1 ? 0 : songIndex + 1;
+            playSong(songIndex);
+        });
+
+        // Update songIndex when a song is played from the list
+        Array.from(document.getElementsByClassName("songItemPlay")).forEach((element, i) => {
+            element.addEventListener('click', (e) => {
+                playSong(i);
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
